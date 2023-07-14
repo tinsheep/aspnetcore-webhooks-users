@@ -5,23 +5,51 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="p-5 mb-4 bg-dark text-white rounded-3">
+<div class="p-5 mb-6 bg-dark text-white rounded-3">
     <h1>Microsoft Graph Notifications Sample</h1>
-    <p class="fs-4">Choose one of the options below to create a subscription</p>
+    <p class="fs-6">Choose one of the options below to create a subscription</p>
 </div>
 <div class="row align-items-md-stretch">
     <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
-            <h2>Delegated authentication</h2>
-            <p>Choose this option to sign in as a user and receive notifications when items are created in the user's Exchange Online mailbox</p>
-            <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="Delegated">Sign in and subscribe</a>
+            <h2>Delegated Chats</h2>
+            <p>Choose this option to sign in as a user and receive notifications for any messages for the Teams user.</p>
+            <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="DelegatedChats">Sign in and subscribe</a>
         </div>
     </div>
     <div class="col-md-6">
         <div class="h-100 p-5 bg-light border rounded-3">
-            <h2>App-only authentication</h2>
+            <h2>Delegated Teams Channel Chats</h2>
+            <p>Choose this option to sign in as a user and receive notifications for all channel messages and replies for a channel.</p>
+            <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="DelegatedChannelChats">Sign in and subscribe</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>App-only Teams Channel Chats</h2>
             <p>Choose this option to have the application receive notifications when messages are sent to any Teams channel</p>
             <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="AppOnly">Subscribe</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>App-only auth Meeting</h2>
+            <p>Choose this option to have the application receive notifications when there is a meeting update</p>
+            <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="AppOnlyMeetings">Subscribe</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Delegated Chats</h2>
+            <p>Choose this option to sign in as a user and receive notifications for any messages for the Teams user.</p>
+            <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="DelegatedChats">Sign in and subscribe</a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+            <h2>Delegated authentication Mail</h2>
+            <p>Choose this option to sign in as a user and receive notifications when items are created in the user's Exchange Online mailbox</p>
+            <a class="btn btn-outline-secondary" asp-controller="Watch" asp-action="Delegated">Sign in and subscribe</a>
         </div>
     </div>
 </div>
